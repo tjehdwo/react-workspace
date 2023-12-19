@@ -55,7 +55,7 @@ function TodoList(){
                     <button onClick={addTodo}>추가하기</button>
                </div>
                <ui>
-                {todos.map((todo,index) => (
+                {todos.map((todo,index) => ( 
                     <li key={index}>
                         {todo}
                         <button onClick={() => removeTodo(index)}>삭제하기</button>
