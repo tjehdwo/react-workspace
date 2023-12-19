@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import AnimalSound from './js/Animal';
 import TimerCount from './js/TimerCount';
 import PracticeOne from './js/PracticeOne';
+import ExampleCallback from './js/ExampleCallback';
+import PracticeTwo from './js/PracticeTwo';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -13,6 +15,8 @@ root.render(
     {/*<AnimalSound />*/}
     <TimerCount />
     <PracticeOne />
+    <ExampleCallback />
+    <PracticeTwo />
   </React.StrictMode>
 );
 reportWebVitals();
