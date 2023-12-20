@@ -7,11 +7,14 @@ import AnimalSound from './js/Animal';
 import TimerCount from './js/TimerCount';
 import ExampleCallback from './js/ExampleCallback';
 import PracticeTwo from './js/PracticeTwo';
+import ChildComponent from './js/ChildComponent';
+import ParentComponent from './js/ParentComponent';
+import Blog from './js/Blog';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App /> 
+     <App />
     {/*<Count />*/}
     {/*<ToggleButton />*/}
     {/*<IndexExample />*/}
@@ -20,6 +23,7 @@ root.render(
     {/*<AnimalSound />*/}
     {/*<TimerCount />*/}
     {/*<PreticeTwo />*/}
+    {/* <ParentComponent /> */}
   </React.StrictMode>
 );
 reportWebVitals();

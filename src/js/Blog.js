@@ -1,20 +1,42 @@
 // /js/Blog.js
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { json } from "react-router-dom";
 
 const Blog = () => {
-    const posts = [
-        {id:1, title:'나의 첫 블로그', content:'블로그입니다.'},
-        {id:2, title:'2번 게시물입니다만', content:'내용은없습니다만'},
-    ];
+  
+
+    const savedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    const [posts, setPosts] = useState(savedPosts);
+    const [newPost,setNewPost] =useState('');
+
+    useEffect(() => {
+        localStorage.setItem('posts',JSON.stringify(posts));
+    },[posts]);
+
+    const addPost = () => {
+        setPosts([...posts,newPost]);
+        setNewPost('');
+    }
+    localStorage.setItem('posts',JSON.stringify([...posts,newPost]));
+
+
     return(
         <div>
             {posts.map(post => (
-                <div key={post.id}>
-                    <h2>{post.title}</h2>
-                    <p>{post.content}</p>
-                </div>
+                    <div>
+                    <textarea
+                    placeholder="게시글을 입력하세요." value={newPost} onChange={(e) => setNewPost(e.target.value)}
+                    >
+                    </textarea>
+                    <br />
+                    <button onClick={addPost}>게시글 추가</button>
+                    </div>
+            
+                
             ))}
-        </div>
+            </div>
+      
+
     )
 }
 export default Blog;
