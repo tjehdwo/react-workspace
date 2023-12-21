@@ -15,7 +15,7 @@ const PostComment = () => {
         ])
         // 데이터를 성공적으로 가져왔을 때
         // axios.spread 여러가지 응답을 개별 응답으로 나눠서 제공된 set 함수에 전달하는 역할
-        .then(axios.spread((usersResponse,commentsResponse) => {
+        .then(axios.spread((usersResponse,commentsResponse,postsResponse) => {
             setUserData(usersResponse.data);
             setPostComments  (commentsResponse.data);
             setPostsData (postsResponse.data);
