@@ -10,11 +10,21 @@ import PracticeTwo from './js/PracticeTwo';
 import ChildComponent from './js/ChildComponent';
 import ParentComponent from './js/ParentComponent';
 import Blog from './js/Blog';
+import HellowWorld from './js/JSXExam';
+import TagExam from './js/TagExam';
+import DogImage from './js/DogInfo';
+import Exam from './js/Joker';
+import Joker from './js/Joker';
+import UserList from './js/UserExam';
+import PostComment from './js/PostComment';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <App />
+    {/* <HellowWorld /> */}
+    {/* <TagExam /> */}
+    {/* <App /> */}
     {/*<Count />*/}
     {/*<ToggleButton />*/}
     {/*<IndexExample />*/}
@@ -24,6 +34,10 @@ root.render(
     {/*<TimerCount />*/}
     {/*<PreticeTwo />*/}
     {/* <ParentComponent /> */}
+    {/* <DogImage /> */}
+    {/* <Joker /> */}
+    {/* <UserList /> */}
+    <PostComment />
   </React.StrictMode>
 );
 reportWebVitals();
